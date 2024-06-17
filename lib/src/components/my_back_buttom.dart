@@ -14,14 +14,14 @@ class MyBackButton extends StatelessWidget {
           height: 45,
           width: 50,
           decoration: BoxDecoration(
-            color: AppColors.lolgreyColor,
+            color: AppColors.whiteColor,
             borderRadius: BorderRadius.circular(12),
           ),
           padding: const EdgeInsets.all(10),
           child: const Center(
             child: Icon(
               Icons.arrow_back_ios,
-              color: AppColors.whiteColor,
+              color: AppColors.white,
             ),
           ),
         ),
