@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:lalafo_flutter/ui/details/my_text.dart';
-import 'package:lalafo_flutter/ui/theme/my_color.dart';
+import 'package:lalafo_flutter/src/data/local/my_text.dart';
+import 'package:lalafo_flutter/src/ui/theme/my_color.dart';
 
 class MyAvatar extends StatelessWidget {
   const MyAvatar({
@@ -9,8 +9,12 @@ class MyAvatar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Size screenSize = MediaQuery.of(context).size;
+    final double avatarRadius = screenSize.width * 0.07;
+    final double imageSize = avatarRadius * 0.8;
+
     return SizedBox(
-      height: 50, // Fixed height for the horizontal ListView
+      height: screenSize.height * 1, // Adapt height based on screen size
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         itemCount: 12,
@@ -31,28 +35,28 @@ class MyAvatar extends StatelessWidget {
           ];
           Color backgroundColor = customColors[index % customColors.length];
           return Container(
-            margin: const EdgeInsets.all(12),
+            margin: EdgeInsets.all(screenSize.width * 0.03),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 CircleAvatar(
-                  radius: 25,
+                  radius: avatarRadius,
                   backgroundColor: backgroundColor,
                   child: ClipOval(
                     child: SizedBox(
-                      width: 40,
-                      height: 40,
+                      width: imageSize,
+                      height: imageSize,
                       child: Image.asset(
                         imageUrl[index],
                       ),
                     ),
                   ),
                 ),
-                const SizedBox(height: 4),
+                SizedBox(height: screenSize.height * 0.00 ),
                 Text(
                   avatar[index],
-                  style: const TextStyle(
-                    fontSize: 12,
+                  style: TextStyle(
+                    fontSize: screenSize.width * 0.03,
                     fontWeight: FontWeight.bold,
                     color: AppColors.blakColor,
                   ),

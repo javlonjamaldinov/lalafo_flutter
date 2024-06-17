@@ -1,25 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:lalafo_flutter/ui/theme/my_color.dart';
+import 'package:lalafo_flutter/src/ui/theme/my_color.dart';
 
-class DuaContainer extends StatelessWidget {
+class MySwitchContainet extends StatelessWidget {
   final String text;
   final Color textColor;
   final VoidCallback onTap;
   final String imageUrl;
 
-  const DuaContainer({
-    Key? key,
+  const MySwitchContainet({
+    super.key,
     required this.text,
     required this.textColor,
     required this.onTap,
     required this.imageUrl,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
     final Size screenSize = MediaQuery.of(context).size;
     final double containerWidth = screenSize.width * 0.5;
-    final double containerHeight = screenSize.width * 0.29;
+    final double containerHeight = screenSize.width * 0.45;
 
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 3),

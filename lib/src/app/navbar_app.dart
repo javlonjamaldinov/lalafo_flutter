@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:lalafo_flutter/ui/page/chats_page.dart';
-import 'package:lalafo_flutter/ui/page/creat_page.dart';
-import 'package:lalafo_flutter/ui/page/favorites_page.dart';
-import 'package:lalafo_flutter/ui/page/home_page.dart';
-import 'package:lalafo_flutter/ui/page/profile_page.dart';
+import 'package:lalafo_flutter/src/ui/page/chats_page.dart';
+import 'package:lalafo_flutter/src/ui/page/creat_page.dart';
+import 'package:lalafo_flutter/src/ui/page/favorites_page.dart';
+import 'package:lalafo_flutter/src/ui/page/home_page.dart';
+import 'package:lalafo_flutter/src/ui/page/profile_page.dart';
 
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({super.key});
@@ -25,8 +25,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
       const ProfilePage(),
     ];
     return Scaffold(
-      backgroundColor: Theme.of(context).colorScheme.background,
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      backgroundColor: Theme.of(context).colorScheme.surface,
       bottomNavigationBar: Stack(
         children: [
           BottomAppBar(
@@ -97,23 +96,22 @@ class _BottomNavBarState extends State<BottomNavBar> {
             ),
           ),
           Positioned(
-            bottom: 22, // This should make half of the CircleAvatar overlap
-            left: MediaQuery.of(context).size.width / 2 -
-                37.5, // Center the icon horizontally
+            bottom: 20,
+            left: MediaQuery.of(context).size.width / 2 - 37.5,
             child: GestureDetector(
               onTap: () {
-                setState(() {
-                  currentIndex = 2;
-                });
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const CreatPage()),
+                );
               },
               child: CircleAvatar(
-                radius: 37.5, // Adjust radius to match your design
-                backgroundColor:
-                    Colors.white, // Set the background color of CircleAvatar
+                radius: 37.5,
+                backgroundColor: Colors.white,
                 child: Icon(
-                  currentIndex == 2 ? Icons.add : Icons.add_outlined,
+                  Icons.add,
                   size: 55,
-                  color: currentIndex == 2 ? Colors.green.shade600 : null,
+                  color: Colors.green.shade600,
                 ),
               ),
             ),
@@ -121,6 +119,18 @@ class _BottomNavBarState extends State<BottomNavBar> {
         ],
       ),
       body: screens[currentIndex],
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.green.shade400,
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const CreatPage()),
+          );
+        },
+        shape: const CircleBorder(),
+        child: const Icon(Icons.add),
+      ),
     );
   }
 }

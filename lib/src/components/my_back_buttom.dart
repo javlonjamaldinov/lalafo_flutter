@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lalafo_flutter/ui/theme/my_color.dart';
+import 'package:lalafo_flutter/src/ui/theme/my_color.dart';
 
 class MyBackButton extends StatelessWidget {
   const MyBackButton({super.key});
