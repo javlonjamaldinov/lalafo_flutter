@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:lalafo_flutter/src/data/local/settings_local.dart';
+import 'package:lalafo_flutter/src/ui/details/my_content.dart';
 import 'package:lalafo_flutter/src/ui/theme/my_color.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -19,13 +20,13 @@ class ProfilePage extends StatelessWidget {
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  CircleAvatar(
+                  const CircleAvatar(
                     radius: 25,
                     backgroundImage: AssetImage('assets/images/Boo.jpg'),
                   ),
-                  SizedBox(width: 10),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 4),
+                  const SizedBox(width: 10),
+                  const Padding(
+                    padding: EdgeInsets.only(top: 4),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -49,8 +50,8 @@ class ProfilePage extends StatelessWidget {
                       ],
                     ),
                   ),
-                  SizedBox(width: 45),
-                  CircleAvatar(
+                  const SizedBox(width: 45),
+                  const CircleAvatar(
                     radius: 20,
                     backgroundColor: AppColors.whiteColor,
                     child: Icon(Icons.edit),
@@ -63,17 +64,17 @@ class ProfilePage extends StatelessWidget {
                     //   );
                     // },
                   ),
-                  SizedBox(width: 10),
+                  const SizedBox(width: 10),
                   GestureDetector(
                     onTap: () {
                       // Navigation logic for settings
                       Navigator.of(context).push(
                         MaterialPageRoute(
-                          builder: (context) => SettingsLocal(),
+                          builder: (context) => const SettingsLocal(),
                         ),
                       );
                     },
-                    child: CircleAvatar(
+                    child: const CircleAvatar(
                       radius: 20,
                       backgroundColor: AppColors.whiteColor,
                       child: Icon(Icons.settings),
@@ -82,6 +83,23 @@ class ProfilePage extends StatelessWidget {
                 ],
               ),
             ),
+            const SizedBox(height: 50),
+            Center(
+              child: Container(
+                height: 220,
+                width: 340,
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(15),
+                  child: Image.asset(
+                    "assets/images/Poster.jpg",
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
+            ),
+            const SizedBox(height: 30),
+           MyContent(),
           ],
         ),
       ),

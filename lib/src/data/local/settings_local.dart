@@ -54,7 +54,7 @@ class SettingsLocal extends StatelessWidget {
                 child: ListView.separated(
                   shrinkWrap: true,
                   physics:
-                      const NeverScrollableScrollPhysics(), // Отключает прокрутку ListView
+                      const NeverScrollableScrollPhysics(),
                   itemCount: settingstext.length,
                   itemBuilder: (BuildContext context, int index) {
                     return ListTile(
@@ -72,7 +72,7 @@ class SettingsLocal extends StatelessWidget {
                         color: AppColors.greyColor,
                       ),
                       onTap: () {
-                        // Добавьте сюда обработчик нажатия на элемент списка
+                       
                       },
                     );
                   },

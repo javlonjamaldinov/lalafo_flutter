@@ -12,4 +12,5 @@ class AppColors {
   static const Color greenColor = Color.fromARGB(255, 158, 246, 95);
   static const Color whiteaccentColor = Color.fromARGB(255, 250, 248, 248);
   static const Color bgwhiteColor = Color.fromARGB(255, 250, 248, 248);
+  static Color green = Colors.green.shade400;
 }

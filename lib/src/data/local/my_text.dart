@@ -66,3 +66,7 @@ List<String> settingstext = [
   'Контакты',
   'Реклама',
 ];
+List<String> contText = [
+  'эфективность',
+  'Кошелек',
+];
