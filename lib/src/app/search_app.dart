@@ -4,6 +4,8 @@ import 'package:lalafo_flutter/src/components/my_textfield.dart';
 import 'package:lalafo_flutter/src/app/product_app.dart';
 import 'package:lalafo_flutter/src/data/model/shop.dart';
 import 'package:lalafo_flutter/src/data/local/my_text.dart';
+import 'package:lalafo_flutter/src/ui/details/text/my_text.dart';
+import 'package:lalafo_flutter/src/ui/details/text/my_text_styles.dart';
 import 'package:lalafo_flutter/src/ui/theme/my_color.dart';
 import 'package:provider/provider.dart';
 
@@ -45,13 +47,9 @@ class SearchApp extends StatelessWidget {
                   padding: EdgeInsets.only(
                       left: screenSize.width * 0.04,
                       bottom: screenSize.height * 0.03),
-                  child: const Text(
-                    'разместите вакансию',
-                    style: TextStyle(
-                      color: AppColors.blakColor,
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                    ),
+                  child:  Text(
+                   AppText.vacancy,
+                    style: MyTextStyles.searsh,
                   ),
                 ),
                 Padding(
@@ -70,29 +68,17 @@ class SearchApp extends StatelessWidget {
           Padding(
             padding: EdgeInsets.only(right: screenSize.width * 0.2),
             child: RichText(
-              text: const TextSpan(
-                text: "Найдено в категории '",
-                style: TextStyle(
-                  color: AppColors.blakColor,
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
-                ),
+              text:  TextSpan(
+                text: AppText.category,
+             style: MyTextStyles.searsh1,
                 children: <TextSpan>[
                   TextSpan(
-                    text: "официант",
-                    style: TextStyle(
-                      color: AppColors.blakColor,
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500,
-                    ),
+                    text: AppText.waiter,
+                style: MyTextStyles.searsh2,
                   ),
                   TextSpan(
                     text: "'",
-                    style: TextStyle(
-                      color: AppColors.blakColor,
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                    ),
+            style: MyTextStyles.searsh3,
                   ),
                 ],
               ),
@@ -125,9 +111,7 @@ class SearchApp extends StatelessWidget {
                           child: Center(
                             child: Text(
                               text,
-                              style: const TextStyle(
-                                color: AppColors.greyColor,
-                              ),
+                                style: MyTextStyles.searshrk,
                             ),
                           ),
                         ),

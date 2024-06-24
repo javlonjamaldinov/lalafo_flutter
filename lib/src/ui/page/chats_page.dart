@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lalafo_flutter/src/ui/theme/my_color.dart';
 
 class ChatsPage extends StatelessWidget {
   const ChatsPage({super.key});
@@ -6,6 +7,7 @@ class ChatsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.bgwhiteColor,
       appBar: AppBar(title: Text("Chats"),),
     );
   }

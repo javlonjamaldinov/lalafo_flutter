@@ -70,3 +70,14 @@ List<String> contText = [
   'эфективность',
   'Кошелек',
 ];
+List<String> manytext = [
+  '3 000 LGS',
+  '1 500 LGS',
+  '1 000 LGS',
+  '800 LGS',
+  '600 LGS',
+  '400 LGS',
+  '300 LGS',
+  '150 LGS',
+  'Другая сумма',
+];

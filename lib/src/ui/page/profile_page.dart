@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:lalafo_flutter/src/data/local/settings_local.dart';
 import 'package:lalafo_flutter/src/ui/details/my_content.dart';
+import 'package:lalafo_flutter/src/ui/details/text/my_text.dart';
+import 'package:lalafo_flutter/src/ui/details/text/my_text_styles.dart';
 import 'package:lalafo_flutter/src/ui/theme/my_color.dart';
 
 class ProfilePage extends StatelessWidget {
@@ -10,13 +12,16 @@ class ProfilePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Size screenSize = MediaQuery.of(context).size;
+
     return Scaffold(
+      backgroundColor: AppColors.bgwhiteColor,
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-              padding: const EdgeInsets.only(top: 45, left: 20),
+              padding: EdgeInsets.only(top: screenSize.height * 0.05, left: screenSize.width * 0.06),
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -25,32 +30,24 @@ class ProfilePage extends StatelessWidget {
                     backgroundImage: AssetImage('assets/images/Boo.jpg'),
                   ),
                   const SizedBox(width: 10),
-                  const Padding(
-                    padding: EdgeInsets.only(top: 4),
+                  Padding(
+                    padding: EdgeInsets.only(top: screenSize.height * 0.01),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "j54772264",
-                          style: TextStyle(
-                            fontSize: 14,
-                            color: AppColors.blakColor,
-                            fontWeight: FontWeight.w500,
-                          ),
+                         AppText.edit,
+                           style: MyTextStyles.profile(screenSize),
                         ),
-                        SizedBox(height: 2),
+                        SizedBox(height: screenSize.height * 0.002),
                         Text(
-                          "редактировать профиль",
-                          style: TextStyle(
-                            fontSize: 13,
-                            color: AppColors.blakColor,
-                            fontWeight: FontWeight.w300,
-                          ),
+                        AppText.profile,
+                         style: MyTextStyles.eprofile(screenSize), 
                         ),
                       ],
                     ),
                   ),
-                  const SizedBox(width: 45),
+                  SizedBox(width: screenSize.width * 0.13),
                   const CircleAvatar(
                     radius: 20,
                     backgroundColor: AppColors.whiteColor,
@@ -83,14 +80,14 @@ class ProfilePage extends StatelessWidget {
                 ],
               ),
             ),
-            const SizedBox(height: 50),
+            SizedBox(height: screenSize.height * 0.05),
             Center(
               child: Container(
-                height: 220,
-                width: 340,
-                padding: const EdgeInsets.symmetric(horizontal: 10),
+                height: screenSize.height * 0.22,
+                width: screenSize.width * 0.85,
+                padding: EdgeInsets.symmetric(horizontal: screenSize.width * 0.03),
                 child: ClipRRect(
-                  borderRadius: BorderRadius.circular(15),
+                  borderRadius: BorderRadius.circular(screenSize.width * 0.044),
                   child: Image.asset(
                     "assets/images/Poster.jpg",
                     fit: BoxFit.cover,
@@ -98,8 +95,8 @@ class ProfilePage extends StatelessWidget {
                 ),
               ),
             ),
-            const SizedBox(height: 30),
-           MyContent(),
+            SizedBox(height: screenSize.height * 0.03),
+            MyContent(),
           ],
         ),
       ),

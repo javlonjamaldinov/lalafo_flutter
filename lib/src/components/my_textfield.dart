@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:lalafo_flutter/src/ui/details/text/my_text.dart';
+import 'package:lalafo_flutter/src/ui/details/text/my_text_styles.dart';
 import 'package:lalafo_flutter/src/ui/theme/my_color.dart';
 
 class MyTextfield extends StatelessWidget {
@@ -40,13 +42,9 @@ class MyTextfield extends StatelessWidget {
             ),
           ),
           const SizedBox(width: 11),
-          const Text(
-            'Фильтр',
-            style: TextStyle(
-              fontSize: 17,
-              color: AppColors.greenColor,
-              fontWeight: FontWeight.w800,
-            ),
+           Text(
+            AppText.filter,
+            style: MyTextStyles.mainsearch,
           ),
         ],
       ),

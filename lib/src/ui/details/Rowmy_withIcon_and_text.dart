@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lalafo_flutter/src/ui/details/text/my_text.dart';
 import 'package:lalafo_flutter/src/ui/page/replenish.dart';
 import 'package:lalafo_flutter/src/ui/theme/my_color.dart';
 
@@ -81,7 +82,7 @@ class RowWithIconAndText extends StatelessWidget {
                 ),
                 child: const Center(
                   child: Text(
-                    "пополнить",
+                AppText.replenish,
                     style: TextStyle(
                       color: AppColors.white,
                       fontWeight: FontWeight.w400,

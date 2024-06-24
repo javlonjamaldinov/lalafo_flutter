@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lalafo_flutter/src/app/search_app.dart';
 import 'package:lalafo_flutter/src/components/look_container.dart';
+import 'package:lalafo_flutter/src/ui/details/text/my_text.dart';
 import 'package:lalafo_flutter/src/ui/theme/my_color.dart';
 
 class WorkApp extends StatelessWidget {
@@ -36,7 +37,7 @@ class WorkApp extends StatelessWidget {
                       ),
                     );
                   },
-                  text: 'Официант',
+                  text: AppText.waiter,
                   textColor: AppColors.textColor,
                   imageUrl: 'assets/images/waiter3.jpg',
                 );
@@ -51,7 +52,7 @@ class WorkApp extends StatelessWidget {
                       ),
                     );
                   },
-                  text: "Промоутер",
+                  text: AppText.promoter,
                   textColor: AppColors.textColor,
                   imageUrl: 'assets/images/R.jpg',
                 );
@@ -66,7 +67,7 @@ class WorkApp extends StatelessWidget {
                       ),
                     );
                   },
-                  text: "Бармен",
+                  text:  AppText.bartender,
                   textColor: AppColors.textColor,
                   imageUrl: 'assets/images/P.jpg',
                 );
@@ -81,7 +82,7 @@ class WorkApp extends StatelessWidget {
                       ),
                     );
                   },
-                  text: "Продовец-консу \n льтант",
+                  text: AppText.salesman,
                   textColor: AppColors.textColor,
                   imageUrl: 'assets/images/E.jpg',
                 );
@@ -96,7 +97,7 @@ class WorkApp extends StatelessWidget {
                       ),
                     );
                   },
-                  text: "Няня",
+                  text:  AppText.nanny,
                   textColor: AppColors.textColor,
                   imageUrl: 'assets/images/H.jpg',
                 );
@@ -111,7 +112,7 @@ class WorkApp extends StatelessWidget {
                       ),
                     );
                   },
-                  text: "Рвзнарабочий",
+                  text: AppText.handyman,
                   textColor: AppColors.textColor,
                   imageUrl: 'assets/images/Hj.jpg',
                 );

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:lalafo_flutter/src/components/my_textfield.dart';
 import 'package:lalafo_flutter/src/ui/details/my_avatar.dart';
+import 'package:lalafo_flutter/src/ui/details/text/my_text.dart';
+import 'package:lalafo_flutter/src/ui/details/text/my_text_styles.dart';
 import 'package:lalafo_flutter/src/ui/theme/my_color.dart';
 import 'package:lalafo_flutter/src/app/work_app.dart';
 
@@ -14,6 +16,7 @@ class HomePage extends StatelessWidget {
     final Size screenSize = MediaQuery.of(context).size;
 
     return Scaffold(
+      backgroundColor: AppColors.bgwhiteColor,
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
@@ -31,12 +34,8 @@ class HomePage extends StatelessWidget {
           Padding(
             padding: EdgeInsets.only(left: screenSize.width * 0.05),
             child: Text(
-              "Летняя работа",
-              style: TextStyle(
-                color: AppColors.blakColor,
-                fontSize: screenSize.width * 0.04,
-                fontWeight: FontWeight.bold,
-              ),
+              AppText.job,
+              style: MyTextStyles.homestl(context), 
             ),
           ),
           SizedBox(height: screenSize.height * 0.005),

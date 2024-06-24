@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:lalafo_flutter/src/components/my_back_buttom.dart';
 import 'package:lalafo_flutter/src/data/local/my_text.dart'; // Предположим, что здесь находится ваш список settingstext
+import 'package:lalafo_flutter/src/ui/details/text/my_text.dart';
+import 'package:lalafo_flutter/src/ui/details/text/my_text_styles.dart';
 import 'package:lalafo_flutter/src/ui/theme/my_color.dart';
 
 class SettingsLocal extends StatelessWidget {
@@ -30,13 +32,9 @@ class SettingsLocal extends StatelessWidget {
                         top: screenSize.height * 0.05,
                         left: 90,
                       ),
-                      child: const Text(
-                        'Настройки',
-                        style: TextStyle(
-                          color: AppColors.blakColor,
-                          fontSize: 17,
-                          fontWeight: FontWeight.bold,
-                        ),
+                      child:  Text(
+                        AppText.settings,
+                        style:  MyTextStyles.settings,
                       ),
                     ),
                   ),
