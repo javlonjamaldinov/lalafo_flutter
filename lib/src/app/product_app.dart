@@ -1,55 +1,104 @@
 import 'package:flutter/material.dart';
-import 'package:lalafo_flutter/src/components/my_switch_container.dart';
 import 'package:lalafo_flutter/src/data/model/food.dart';
-import 'package:lalafo_flutter/src/data/model/shop.dart';
+import 'package:lalafo_flutter/src/data/model/shop.dart'; // Импорт класса Shop
 import 'package:lalafo_flutter/src/ui/theme/my_color.dart';
 import 'package:provider/provider.dart';
 
 class ProductApp extends StatelessWidget {
   const ProductApp({
-    super.key,
-  });
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     final Size screenSize = MediaQuery.of(context).size;
-    final double itemHeight = (screenSize.height - kToolbarHeight - 26) / 5;
-    final double itemWidth = screenSize.width / 3;
+    final double itemHeight = (screenSize.height - kToolbarHeight - 26) / 3.8;
+    final double itemWidth = screenSize.width / 2;
 
     return Padding(
-      padding: const EdgeInsets.only(top: 5),
+      padding: const EdgeInsets.all(8.0),
       child: Consumer<Shop>(
-        builder: (context, shop, _) => GridView.builder(
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2,
-            crossAxisSpacing: 1,
-            mainAxisSpacing: 40,
-            childAspectRatio: itemWidth / itemHeight,
-          ),
-          itemCount: shop.foodMenu.length,
+        builder: (context, shop, _) => ListView.builder(
+          itemCount: (shop.foodMenu.length / 2).ceil(),
           itemBuilder: (BuildContext context, int index) {
-            final Food food = shop.foodMenu[index];
-            return Column(
-              children: [
-                SizedBox(
-                  height: itemHeight,
-                  width: itemWidth,
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 1),
-                    child: MySwitchContainet(
-                      onTap: () {
-                        shop.addToCart(food, 1);
-                      },
-                      text: food.name,
-                      textColor: AppColors.textColor,
-                      imageUrl: food.imagePath,
-                    ),
-                  ),
+            final int firstIndex = index * 2;
+            final int secondIndex = firstIndex + 1;
+
+            return Row(
+              children: <Widget>[
+                Expanded(
+                  child: _buildFoodCard(
+                      shop.foodMenu[firstIndex], itemHeight, itemWidth),
                 ),
-                const SizedBox(height: 10), // Пространство между контейнерами
+                const SizedBox(width: 8.0), // Расстояние между элементами
+                if (secondIndex < shop.foodMenu.length)
+                  Expanded(
+                    child: _buildFoodCard(
+                        shop.foodMenu[secondIndex], itemHeight, itemWidth),
+                  ),
               ],
             );
           },
+        ),
+      ),
+    );
+  }
+
+  Widget _buildFoodCard(Food food, double itemHeight, double itemWidth) {
+    return SizedBox(
+      width: itemWidth,
+      child: Card(
+        color: Colors.white,
+        child: Container(
+          constraints: BoxConstraints(minHeight: itemHeight),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SizedBox(
+                width: itemWidth / 1,
+                height: 230,
+                child: Image.asset(
+                  food.imagePath,
+                  fit: BoxFit.cover,
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      food.name,
+                      style: const TextStyle(
+                        fontSize: 16.0,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                    const SizedBox(height: 8.0),
+                    Text(
+                      'Цена: ${food.price}',
+                      style: TextStyle(
+                        fontSize: 14.0,
+                        color: Colors.grey[600],
+                      ),
+                    ),
+                    const SizedBox(height: 8.0),
+                    Text(
+                      food.announcement,
+                      style: TextStyle(
+                        fontSize: 14.0,
+                        color: Colors.grey[600],
+                      ),
+                      maxLines: 4,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

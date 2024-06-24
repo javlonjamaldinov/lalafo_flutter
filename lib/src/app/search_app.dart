@@ -47,8 +47,8 @@ class SearchApp extends StatelessWidget {
                   padding: EdgeInsets.only(
                       left: screenSize.width * 0.04,
                       bottom: screenSize.height * 0.03),
-                  child:  Text(
-                   AppText.vacancy,
+                  child: Text(
+                    AppText.vacancy,
                     style: MyTextStyles.searsh,
                   ),
                 ),
@@ -68,17 +68,17 @@ class SearchApp extends StatelessWidget {
           Padding(
             padding: EdgeInsets.only(right: screenSize.width * 0.2),
             child: RichText(
-              text:  TextSpan(
+              text: TextSpan(
                 text: AppText.category,
-             style: MyTextStyles.searsh1,
+                style: MyTextStyles.searsh1,
                 children: <TextSpan>[
                   TextSpan(
                     text: AppText.waiter,
-                style: MyTextStyles.searsh2,
+                    style: MyTextStyles.searsh2,
                   ),
                   TextSpan(
                     text: "'",
-            style: MyTextStyles.searsh3,
+                    style: MyTextStyles.searsh3,
                   ),
                 ],
               ),
@@ -90,9 +90,7 @@ class SearchApp extends StatelessWidget {
             child: Row(
               children: tabText.map((text) {
                 return GestureDetector(
-                  onTap: () {
-                    // Обработка нажатия на контейнер
-                  },
+                  onTap: () {},
                   child: Container(
                     margin: EdgeInsets.symmetric(
                         horizontal: screenSize.width * 0.02),
@@ -111,7 +109,7 @@ class SearchApp extends StatelessWidget {
                           child: Center(
                             child: Text(
                               text,
-                                style: MyTextStyles.searshrk,
+                              style: MyTextStyles.searshrk,
                             ),
                           ),
                         ),

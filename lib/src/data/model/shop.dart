@@ -31,12 +31,43 @@ class Shop extends ChangeNotifier {
       announcement:
           "Попробуйте нашу аппетитную пиццу с пикантным пепперони и сыром моцарелла!",
     ),
+    Food(
+      name: "Tuna Sashimi",
+      price: "300 000",
+      imagePath: "assets/images/waiter5.jpg",
+      announcement:
+          "Нежный и свежий тунец для ценителей японской кухни!",
+    ),
+    Food(
+      name: "Margherita Pizza",
+      price: "250 000",
+      imagePath: "assets/images/waiter6.jpg",
+      announcement:
+          "Классическая итальянская пицца с сочными помидорами и нежным моцарелла!",
+    ),
+    Food(
+      name: "California Roll",
+      price: "280 000",
+      imagePath: "assets/images/waiter7.jpg",
+      announcement:
+          "Изысканный ролл с крабовым мясом и авокадо, завернутый в нори и рис!",
+    ),
+    Food(
+      name: "Cheeseburger",
+      price: "180 000",
+      imagePath: "assets/images/waiter8.jpg",
+      announcement:
+          "Сочный говяжий бургер с ароматным сыром и свежими овощами!",
+    ),
   ];
+
   final List<Food> _cart = [];
+
   List<Food> get foodMenu => _foodMenu;
   List<Food> get cart => _cart;
-  void addToCart(Food foodItem, int guantity) {
-    for (int i = 0; i < guantity; i++) {
+
+  void addToCart(Food foodItem, int quantity) {
+    for (int i = 0; i < quantity; i++) {
       _cart.add(foodItem);
     }
     notifyListeners();
