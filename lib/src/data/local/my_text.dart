@@ -81,3 +81,43 @@ List<String> manytext = [
   '150 LGS',
   'Другая сумма',
 ];
+List<String> category = [
+  'Транспорт',
+  'Недвижемость',
+  'Услуги',
+  'Дом и сад',
+  'Техника и электроника',
+  'Работа',
+  'Личные вещи',
+  'Спорт и хобби',
+  'Животные',
+  'Оборудывание для \n бизнеса',
+  'Детский мир',
+  'Медтовары',
+  'Иссык-Куль 2024',
+  'Находки, отдам даром',
+  'Бизнесы на lalafo',
+];
+List<String>  categoryImg= [
+  'assets/icons/category1.png',
+  'assets/icons/category2.png',
+  'assets/icons/category3.png',
+  'assets/icons/category4.png',
+  'assets/icons/category5.png',
+  'assets/icons/category6.png',
+  'assets/icons/category7.png',
+  'assets/icons/category8.png',
+  'assets/icons/category9.png',
+  'assets/icons/category10.png',
+  'assets/icons/category11.png',
+  'assets/icons/category12.png',
+  'assets/icons/category13.png',
+  'assets/icons/category14.png',
+  'assets/icons/category15.png',
+];
+List<String> sorting = [
+  'По умолчанию',
+  'Сначала новые',
+  'Сначала дешевлее',
+  'Сначала дороже',
+];

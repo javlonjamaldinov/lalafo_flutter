@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lalafo_flutter/src/ui/details/text/my_text.dart';
 import 'package:lalafo_flutter/src/ui/details/text/my_text_styles.dart';
+import 'package:lalafo_flutter/src/ui/page/filter.dart';
 import 'package:lalafo_flutter/src/ui/theme/my_color.dart';
 
 class MyTextfield extends StatelessWidget {
@@ -23,9 +24,7 @@ class MyTextfield extends StatelessWidget {
               ),
               child: TextField(
                 decoration: InputDecoration(
-                  contentPadding: const EdgeInsets.symmetric(
-                      vertical:
-                          14.0), 
+                  contentPadding: const EdgeInsets.symmetric(vertical: 14.0),
                   focusedBorder: OutlineInputBorder(
                     borderSide: const BorderSide(color: Colors.white),
                     borderRadius: BorderRadius.circular(7),
@@ -42,9 +41,17 @@ class MyTextfield extends StatelessWidget {
             ),
           ),
           const SizedBox(width: 11),
-           Text(
-            AppText.filter,
-            style: MyTextStyles.mainsearch,
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const Filter()),
+              );
+            },
+            child: Text(
+              AppText.filter,
+              style: MyTextStyles.mainsearch,
+            ),
           ),
         ],
       ),

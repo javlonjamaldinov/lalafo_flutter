@@ -17,6 +17,14 @@ class AppText {
   static const String salesman = "Продавец-консу \n льтант";
   static const String nanny = "Няня";
   static const String handyman = "Разнорабочий";
-   static const String vacancy = 'разместите вакансию';
-   static const String category =  "Найдено в категории '";
+  static const String vacancy = 'разместите вакансию';
+  static const String category = "Найдено в категории '";
+  static const String clear = 'очистить';
+  static const String mycategory = 'категория';
+  static const String selectCategory = 'Выберите категорию';
+  static const String sort = 'Сортировать';
+  static const String price = 'цена';
+  static const String kgs = 'KGS';
+  static const String usd = 'USD';
+  static const String location = 'выберите местоположение';
 }

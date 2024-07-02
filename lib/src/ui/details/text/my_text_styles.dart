@@ -83,9 +83,19 @@ class MyTextStyles {
     color: AppColors.greenColor,
     fontWeight: FontWeight.w800,
   );
-   static TextStyle settings = const TextStyle(
-                          color: AppColors.blakColor,
-                          fontSize: 17,
-                          fontWeight: FontWeight.bold,
-                        );
+  static TextStyle settings = const TextStyle(
+    color: AppColors.blakColor,
+    fontSize: 17,
+    fontWeight: FontWeight.bold,
+  );
+  static TextStyle searshText = TextStyle(
+    color: AppColors.green,
+    fontSize: 16,
+    fontWeight: FontWeight.w400,
+  );
+  static TextStyle mycategories = const TextStyle(
+    color: AppColors.blakColor,
+    fontSize: 16,
+    fontWeight: FontWeight.bold,
+  );
 }
