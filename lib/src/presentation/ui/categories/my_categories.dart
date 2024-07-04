@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:lalafo_flutter/src/ui/categories/categories_data.dart';
-import 'package:lalafo_flutter/src/ui/details/text/my_text.dart';
-import 'package:lalafo_flutter/src/ui/theme/my_color.dart';
+import 'package:lalafo_flutter/src/presentation/ui/categories/categories_data.dart';
+import 'package:lalafo_flutter/src/presentation/ui/details/text/my_text.dart';
+import 'package:lalafo_flutter/src/presentation/ui/theme/my_color.dart';
 
 class MyCategories extends StatelessWidget {
   const MyCategories({super.key});

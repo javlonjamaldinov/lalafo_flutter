@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lalafo_flutter/src/data/model/food.dart';
 import 'package:lalafo_flutter/src/data/model/shop.dart'; // Импорт класса Shop
-import 'package:lalafo_flutter/src/ui/theme/my_color.dart';
+import 'package:lalafo_flutter/src/presentation/ui/theme/my_color.dart';
 import 'package:provider/provider.dart';
 
 class ProductApp extends StatelessWidget {

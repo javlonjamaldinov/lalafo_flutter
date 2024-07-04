@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:lalafo_flutter/src/data/local/my_text.dart';
-import 'package:lalafo_flutter/src/ui/categories/my_categories.dart';
-import 'package:lalafo_flutter/src/ui/details/my_price.dart';
-import 'package:lalafo_flutter/src/ui/details/text/my_text.dart';
-import 'package:lalafo_flutter/src/ui/details/text/my_text_styles.dart';
-import 'package:lalafo_flutter/src/ui/theme/my_color.dart';
+import 'package:lalafo_flutter/src/presentation/ui/categories/my_categories.dart';
+import 'package:lalafo_flutter/src/presentation/ui/details/my_naviget_container.dart';
+import 'package:lalafo_flutter/src/presentation/ui/details/my_price.dart';
+import 'package:lalafo_flutter/src/presentation/ui/details/text/my_text.dart';
+import 'package:lalafo_flutter/src/presentation/ui/details/text/my_text_styles.dart';
+import 'package:lalafo_flutter/src/presentation/ui/theme/my_color.dart';
 
 class Filter extends StatefulWidget {
   const Filter({super.key});
@@ -154,8 +155,30 @@ class _FilterState extends State<Filter> {
                 ),
               ),
             ),
-            MyPrice(),
-            
+            const MyPrice(),
+          ],
+        ),
+      ),
+      bottomNavigationBar: BottomAppBar(
+        height: 80,
+        elevation: 10,
+        color: AppColors.whiteColor,
+        child: Column(
+          children: [
+            Container(
+              height: 50,
+              width: 340,
+              decoration: BoxDecoration(
+                color: Colors.green,
+                borderRadius: BorderRadius.circular(25),
+              ),
+              child: Center(
+                child: Text(
+                  AppText.replenish,
+                  style: MyTextStyles.content,
+                ),
+              ),
+            ),
           ],
         ),
       ),

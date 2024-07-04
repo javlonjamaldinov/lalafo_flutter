@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:lalafo_flutter/src/data/local/my_text.dart';
-import 'package:lalafo_flutter/src/ui/details/text/my_text.dart';
-import 'package:lalafo_flutter/src/ui/details/text/my_text_styles.dart';
-import 'package:lalafo_flutter/src/ui/theme/my_category_color.dart';
-import 'package:lalafo_flutter/src/ui/theme/my_color.dart';
+import 'package:lalafo_flutter/src/presentation/ui/details/text/my_text.dart';
+import 'package:lalafo_flutter/src/presentation/ui/details/text/my_text_styles.dart';
+import 'package:lalafo_flutter/src/presentation/ui/theme/my_category_color.dart';
+import 'package:lalafo_flutter/src/presentation/ui/theme/my_color.dart';
 
 class CategoriesData extends StatelessWidget {
   const CategoriesData({super.key});

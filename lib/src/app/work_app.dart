@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:lalafo_flutter/src/app/search_app.dart';
 import 'package:lalafo_flutter/src/components/look_container.dart';
-import 'package:lalafo_flutter/src/ui/details/text/my_text.dart';
-import 'package:lalafo_flutter/src/ui/theme/my_color.dart';
+import 'package:lalafo_flutter/src/presentation/ui/details/text/my_text.dart';
+import 'package:lalafo_flutter/src/presentation/ui/theme/my_color.dart';
 
 class WorkApp extends StatelessWidget {
   const WorkApp({super.key});

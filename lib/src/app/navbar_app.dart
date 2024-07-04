@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:lalafo_flutter/src/ui/page/chats_page.dart';
-import 'package:lalafo_flutter/src/ui/page/creat_page.dart';
-import 'package:lalafo_flutter/src/ui/page/favorites_page.dart';
-import 'package:lalafo_flutter/src/ui/page/home_page.dart';
-import 'package:lalafo_flutter/src/ui/page/profile_page.dart';
+import 'package:lalafo_flutter/src/presentation/ui/page/chats_page.dart';
+import 'package:lalafo_flutter/src/presentation/ui/page/creat_page.dart';
+import 'package:lalafo_flutter/src/presentation/ui/page/favorites_page.dart';
+import 'package:lalafo_flutter/src/presentation/ui/page/home_page.dart';
+import 'package:lalafo_flutter/src/presentation/ui/page/profile_page.dart';
 
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({super.key});

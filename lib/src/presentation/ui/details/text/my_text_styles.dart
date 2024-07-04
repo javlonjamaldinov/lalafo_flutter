@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lalafo_flutter/src/ui/theme/my_color.dart';
+import 'package:lalafo_flutter/src/presentation/ui/theme/my_color.dart';
 
 class MyTextStyles {
   static TextStyle wallet1 = const TextStyle(
@@ -98,4 +98,10 @@ class MyTextStyles {
     fontSize: 16,
     fontWeight: FontWeight.bold,
   );
+  static TextStyle country = const TextStyle(
+    color: AppColors.blakColor,
+    fontSize: 16,
+    fontWeight: FontWeight.bold,
+  );
+  static TextStyle searshstl =const TextStyle(color: AppColors.lolgreyColor);
 }

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:lalafo_flutter/src/components/my_textfield.dart';
-import 'package:lalafo_flutter/src/ui/details/my_avatar.dart';
-import 'package:lalafo_flutter/src/ui/details/text/my_text.dart';
-import 'package:lalafo_flutter/src/ui/details/text/my_text_styles.dart';
-import 'package:lalafo_flutter/src/ui/theme/my_color.dart';
+import 'package:lalafo_flutter/src/presentation/ui/details/my_avatar.dart';
+import 'package:lalafo_flutter/src/presentation/ui/details/text/my_text.dart';
+import 'package:lalafo_flutter/src/presentation/ui/details/text/my_text_styles.dart';
+import 'package:lalafo_flutter/src/presentation/ui/theme/my_color.dart';
 import 'package:lalafo_flutter/src/app/work_app.dart';
 
 class HomePage extends StatelessWidget {

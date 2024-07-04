@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:lalafo_flutter/src/ui/categories/bloc/price_bloc.dart';
-import 'package:lalafo_flutter/src/ui/categories/bloc/price_event.dart';
-import 'package:lalafo_flutter/src/ui/categories/bloc/price_state.dart';
-import 'package:lalafo_flutter/src/ui/details/numericInput_row.dart';
-import 'package:lalafo_flutter/src/ui/details/text/my_text.dart';
-import 'package:lalafo_flutter/src/ui/details/text/my_text_styles.dart';
-import 'package:lalafo_flutter/src/ui/theme/my_color.dart';
+import 'package:lalafo_flutter/src/presentation/ui/categories/bloc/price_bloc.dart';
+import 'package:lalafo_flutter/src/presentation/ui/categories/bloc/price_event.dart';
+import 'package:lalafo_flutter/src/presentation/ui/categories/bloc/price_state.dart';
+import 'package:lalafo_flutter/src/presentation/ui/details/numericInput_row.dart';
+import 'package:lalafo_flutter/src/presentation/ui/details/text/my_text.dart';
+import 'package:lalafo_flutter/src/presentation/ui/details/text/my_text_styles.dart';
+import 'package:lalafo_flutter/src/presentation/ui/theme/my_color.dart';
 
 class MyPrice extends StatelessWidget {
   const MyPrice({

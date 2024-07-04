@@ -13,6 +13,7 @@ class AppColors {
   static const Color whiteaccentColor = Color.fromARGB(255, 250, 248, 248);
   static const Color bgwhiteColor = Color.fromARGB(255, 250, 248, 248);
   static const Color whitegrColor = Color.fromARGB(255, 250, 246, 246);
+  static const Color dvgreyColor = Color.fromARGB(255, 226, 224, 224);
   static Color green = Colors.green.shade400;
   static Color orange = Colors.orange.shade400;
 }
