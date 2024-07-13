@@ -15,6 +15,7 @@ class MyTextfield extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 20.0),
       child: Row(
         children: [
+
           Expanded(
             child: Container(
               height: 45,

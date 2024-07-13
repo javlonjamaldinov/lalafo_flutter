@@ -1,46 +1,56 @@
-// import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 
-// class TabItem extends StatelessWidget {
-//   final String title;
-//   final int count;
+class TabBarDemo extends StatefulWidget {
+  const TabBarDemo({super.key});
 
-//   const TabItem({
-//     super.key,
-//     required this.title,
-//     required this.count,
-//   });
+  @override
+  _TabBarDemoState createState() => _TabBarDemoState();
+}
 
-//   @override
-//   Widget build(BuildContext context) {
-//     return Tab(
-//       child: Row(
-//         mainAxisAlignment: MainAxisAlignment.center,
-//         children: [
-//           Text(
-//             title,
-//             overflow: TextOverflow.ellipsis,
-//           ),
-//           count > 0
-//               ? Container(
-//                   margin: const EdgeInsetsDirectional.only(start: 5, ),
-//                   padding: const EdgeInsets.all(3),
-//                   decoration: BoxDecoration(
-//                     color: Colors.grey.shade200,
-//                     shape: BoxShape.circle,
-//                   ),
-//                   child: Center(
-//                     child: Text(
-//                       count > 9 ? "9+" : count.toString(),
-//                       style: const TextStyle(
-//                         color: Colors.black54,
-//                         fontSize: 10,
-//                       ),
-//                     ),
-//                   ),
-//                 )
-//               : const SizedBox(width: 10, height: 0),
-//         ],
-//       ),
-//     );
-//   }
-// }
+class _TabBarDemoState extends State<TabBarDemo>
+    with SingleTickerProviderStateMixin {
+  late TabController _tabController;
+
+  @override
+  void initState() {
+    super.initState();
+    _tabController = TabController(length: 2, vsync: this);
+  }
+
+  @override
+  void dispose() {
+    _tabController.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Container(
+          width: 340,
+          height: 50,
+          color: Colors.grey[200],
+          child: TabBar(
+            controller: _tabController,
+            indicator: BoxDecoration(
+              borderRadius: BorderRadius.circular(10),
+              color: Colors.white,
+            ),
+            indicatorSize: TabBarIndicatorSize.tab,
+            labelColor: Colors.black,
+            unselectedLabelColor: Colors.black,
+            tabs: const [
+              Tab(
+                text: 'Рекомендуемые',
+              ),
+              Tab(
+                text: 'Новые',
+              ),
+            ],
+          ),
+        ),
+      ],
+    );
+  }
+}

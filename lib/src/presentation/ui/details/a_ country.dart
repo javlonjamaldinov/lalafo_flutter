@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lalafo_flutter/src/presentation/map/world_map.dart';
 import 'package:lalafo_flutter/src/presentation/ui/details/text/my_text.dart';
 import 'package:lalafo_flutter/src/presentation/ui/theme/my_color.dart';
 
@@ -18,21 +19,28 @@ class _ACountryState extends State<ACountry> {
     });
   }
 
+  void navigateToMapPage() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) =>  WorldMap()),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: GestureDetector(
-        onTap: toggleSelection,
-        child: Container(
-          width: 360,
-          height: 35,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20),
-            border: Border.all(color: AppColors.green),
-          ),
-          child: Row(
-            children: [
-              Expanded(
+      child: Container(
+        width: 360,
+        height: 35,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20),
+          border: Border.all(color: AppColors.green),
+        ),
+        child: Row(
+          children: [
+            Expanded(
+              child: GestureDetector(
+                onTap: toggleSelection,
                 child: Container(
                   decoration: BoxDecoration(
                     color:
@@ -51,7 +59,10 @@ class _ACountryState extends State<ACountry> {
                   ),
                 ),
               ),
-              Expanded(
+            ),
+            Expanded(
+              child: GestureDetector(
+                onTap: navigateToMapPage,
                 child: Container(
                   decoration: BoxDecoration(
                     color:
@@ -70,8 +81,8 @@ class _ACountryState extends State<ACountry> {
                   ),
                 ),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

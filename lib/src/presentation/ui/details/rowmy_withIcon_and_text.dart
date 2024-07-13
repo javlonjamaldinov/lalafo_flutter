@@ -16,6 +16,7 @@ class RowWithIconAndText extends StatelessWidget {
   final VoidCallback? onTap;
 
   const RowWithIconAndText({
+    super.key,
     required this.icon,
     required this.text,
     required this.iconPaddingLeft,
@@ -82,7 +83,7 @@ class RowWithIconAndText extends StatelessWidget {
                 ),
                 child: const Center(
                   child: Text(
-                AppText.replenish,
+                    AppText.replenish,
                     style: TextStyle(
                       color: AppColors.white,
                       fontWeight: FontWeight.w400,

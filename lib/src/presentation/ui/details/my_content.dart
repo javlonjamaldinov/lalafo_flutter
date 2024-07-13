@@ -4,9 +4,8 @@ import 'package:lalafo_flutter/src/presentation/ui/details/rowmy_withIcon_and_te
 import 'package:lalafo_flutter/src/presentation/ui/page/replenish.dart';
 import 'package:lalafo_flutter/src/presentation/ui/theme/my_color.dart';
 
-
 class MyContent extends StatelessWidget {
-  const MyContent({Key? key}) : super(key: key);
+  const MyContent({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +17,7 @@ class MyContent extends StatelessWidget {
     const double iconPaddingBottom = 15;
     const double textFontSize = 16;
     const double buttonWidth = 100;
-    const double buttonHeight = 30; // Declaring buttonHeight here
+    const double buttonHeight = 30;
     final double dividerHorizontalPadding = screenSize.width * 0.0882;
     final double buttonPaddingRight = screenSize.width * 0.035;
 
@@ -39,6 +38,7 @@ class MyContent extends StatelessWidget {
               text: contText[0],
               iconPaddingLeft: iconPaddingLeft,
               iconPaddingTop: iconPaddingTop,
+              iconPaddingBottom: 0,
               textFontSize: textFontSize,
               buttonWidth: buttonWidth,
               buttonHeight: buttonHeight,
@@ -49,6 +49,7 @@ class MyContent extends StatelessWidget {
               icon: Icons.account_balance_wallet_rounded,
               text: contText[1],
               iconPaddingLeft: iconPaddingLeft,
+              iconPaddingTop: 0,
               iconPaddingBottom: iconPaddingBottom,
               textFontSize: textFontSize,
               buttonWidth: buttonWidth,

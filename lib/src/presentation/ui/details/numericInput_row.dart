@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lalafo_flutter/src/presentation/map/world_map.dart';
+import 'package:lalafo_flutter/src/presentation/map/world_cities.dart';
 import 'package:lalafo_flutter/src/presentation/ui/details/text/my_text.dart';
 import 'package:lalafo_flutter/src/presentation/ui/details/text/my_text_styles.dart';
 import 'package:lalafo_flutter/src/presentation/ui/theme/my_color.dart';
@@ -86,7 +86,7 @@ class NumericInputRow extends StatelessWidget {
           onTap: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => const WorldMap()),
+              MaterialPageRoute(builder: (context) => const WorldCities()),
             );
           },
           child: const Row(
