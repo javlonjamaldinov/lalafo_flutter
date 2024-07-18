@@ -3,7 +3,7 @@ class Food {
   String price;
   String imagePath;
   String announcement;
-  String avatarImagePath; // Новое поле для аватара
+  String avatarImagePath;
   bool isFavorite;
 
   Food({
@@ -11,9 +11,7 @@ class Food {
     required this.price,
     required this.imagePath,
     required this.announcement,
-    required this.avatarImagePath, // Инициализация нового поля
+    required this.avatarImagePath, 
     this.isFavorite = false,
   });
-
-
 }

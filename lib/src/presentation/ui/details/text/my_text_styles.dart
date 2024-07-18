@@ -104,4 +104,8 @@ class MyTextStyles {
     fontWeight: FontWeight.bold,
   );
   static TextStyle searshstl =const TextStyle(color: AppColors.lolgreyColor);
+   static TextStyle edit =const TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 19,
+          );
 }

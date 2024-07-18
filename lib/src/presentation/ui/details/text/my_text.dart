@@ -28,7 +28,7 @@ class AppText {
   static const String usd = 'USD';
   static const String location = 'выберите местоположение';
   static const String wholeCountry = 'Вся страна';
-   static const String map = 'Карта';
-   static const String cities ='Города';
-      
+  static const String map = 'Карта';
+  static const String cities = 'Города';
+  static const String editProfile = 'Редактировать Профиль';
 }

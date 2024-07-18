@@ -142,7 +142,6 @@ class _FilterState extends State<Filter> {
                           color: AppColors.green,
                         ),
                       ),
-                      onTap: () {},
                     );
                   },
                   separatorBuilder: (BuildContext context, int index) =>
